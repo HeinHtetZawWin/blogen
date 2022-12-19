@@ -38,5 +38,10 @@ public class PostController {
         model.addAttribute("categories", blogenService.findAllCategories());
         return "list-categories";
     }
+    @GetMapping("/list-users")
+    public String listAllUsers(Model model) {
+        model.addAttribute("users", blogenService.findAllUsers());
+        return "list-users";
+    }
 
 }
